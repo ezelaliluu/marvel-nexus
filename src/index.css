@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #040407;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #06070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2235;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Cosmic Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Glassmorphic Panels */
+.glass-panel {
+  background: rgba(13, 15, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(18, 16, 12, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.08);
+}
+
+/* Glowing text */
+.text-glow-gold {
+  text-shadow: 0 0 16px rgba(234, 179, 8, 0.6), 0 0 32px rgba(234, 179, 8, 0.3);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 16px rgba(168, 85, 247, 0.6), 0 0 32px rgba(168, 85, 247, 0.3);
+}
+
+/* Thanos Snap Disintegration animation helper */
+.disintegrate {
+  animation: disintegrateAnim 1.6s forwards cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes disintegrateAnim {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  40% {
+    filter: blur(4px) brightness(1.8);
+    opacity: 0.8;
+    transform: translateY(-8px) rotate(1deg) scale(1.02);
+  }
+  100% {
+    filter: blur(20px) brightness(0.2);
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9) skewX(15deg);
+    pointer-events: none;
+  }
+}
