@@ -329,16 +329,6 @@ export default function App() {
               {activeItem.desc}
             </p>
 
-            {/* Price Tag & Stock Status */}
-            <div className="pt-1 flex items-baseline gap-4">
-              <span className="text-2xl sm:text-3xl font-mono font-bold text-white tracking-tight">
-                {activeItem.price}
-              </span>
-              <span className="text-[11px] font-mono tracking-wide text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-2 py-0.5 rounded">
-                IN STOCK // PRE-ORDER OPEN
-              </span>
-            </div>
-
             {/* Primary CTA Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
