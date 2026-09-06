@@ -223,25 +223,26 @@ export default function App() {
             ---------------------------------------------------------------- */}
         <header className="w-full flex items-center justify-between pointer-events-auto">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-xs tracking-tighter shadow-lg transition-colors duration-500"
-              style={{ backgroundColor: activeItem.accentColor }}
-            >
-              MARVEL
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-xs font-mono uppercase tracking-widest text-slate-200 font-semibold">
-                  STARK ARCHIVE
-                </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              </div>
-              <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider">
-                Vault OS // 2026.09
-              </p>
-            </div>
-          </div>
+<div className="flex items-center gap-3">
+  {/* Gambar Logo dari folder public */}
+  <img 
+    src="/marvel-logo.png" 
+    alt="Marvel Logo" 
+    className="h-8 w-auto object-contain drop-shadow-lg" 
+  />
+  
+  <div>
+    <div className="flex items-center gap-1.5">
+      <span className="text-xs font-mono uppercase tracking-widest text-slate-200 font-semibold">
+        MARVEL MULTIVERSE
+      </span>
+      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+    </div>
+    <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider">
+      Vault OS // 2026.09
+    </p>
+  </div>
+</div>
 
           {/* Center Links (DualSense promo style) */}
           <nav className="hidden md:flex items-center gap-8 bg-white/[0.03] backdrop-blur-md px-6 py-2 rounded-full border border-white/10 shadow-xl shadow-black/40">
